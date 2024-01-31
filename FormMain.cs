@@ -962,9 +962,6 @@ namespace WindowsFormsApp1
 
             }
 
-
-
-
             //foreach (PictureBox p in fmonitor.GetControls<PictureBox>())
             //{
             //    Console.WriteLine(p.Name);
@@ -973,7 +970,7 @@ namespace WindowsFormsApp1
 
 
         /// <summary>
-        /// 
+        /// pic[0]重绘事件，当Tag为1时，为pic[0]添加Border
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -992,7 +989,11 @@ namespace WindowsFormsApp1
 
         }
 
-
+        /// <summary>
+        /// pic[1]重绘事件，当Tag为1时，为pic[0]添加Border
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics1_Paint(object sender, PaintEventArgs e)
         {
             if ((int)pics[1].Tag == 1)
@@ -1007,6 +1008,11 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// pic[2]重绘事件，当Tag为1时，为pic[0]添加Border
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics2_Paint(object sender, PaintEventArgs e)
         {
             if ((int)pics[2].Tag == 1)
@@ -1021,6 +1027,11 @@ namespace WindowsFormsApp1
 
         }
 
+        /// <summary>
+        /// pic[3]重绘事件，当Tag为1时，为pic[0]添加Border
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics3_Paint(object sender, PaintEventArgs e)
         {
             if ((int)pics[3].Tag == 1)
@@ -1035,7 +1046,10 @@ namespace WindowsFormsApp1
 
         }
 
-
+        /// <summary>
+        /// 刷新picturebox Tag，当点击某一picturebox时，Tag置为1
+        /// </summary>
+        /// <param name="num"></param>
         void RefreshPictureBoxBorder(int num)
         {
             for (int i = 0; i < Globals.systemParam.cameraNum * 2; i++)
@@ -1052,21 +1066,42 @@ namespace WindowsFormsApp1
             }
         }
 
+
+        /// <summary>
+        /// pics[0]点击事件，点击picturebox，刷新Tag
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics0_Click(object sender, EventArgs e)
         {
             RefreshPictureBoxBorder(0);
         }
 
+        /// <summary>
+        /// pics[1]点击事件，点击picturebox，刷新Tag
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics1_Click(object sender, EventArgs e)
         {
             RefreshPictureBoxBorder(1);
         }
 
+        /// <summary>
+        /// pics[2]点击事件，点击picturebox，刷新Tag
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics2_Click(object sender, EventArgs e)
         {
             RefreshPictureBoxBorder(2);
         }
 
+        /// <summary>
+        /// pics[3]点击事件，点击picturebox，刷新Tag
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Pics3_Click(object sender, EventArgs e)
         {
             RefreshPictureBoxBorder(3);
